@@ -10,7 +10,7 @@ function getRandomHexColor() {
 }
 buttonStartEl.addEventListener('click', onStartButtonClick);
 buttonStopEl.addEventListener('click', onStopButtonClick);
-
+let timerId = 0;
 function onStartButtonClick() {
   timerId = setInterval(function aaa() {
     bodyEl.style.backgroundColor = getRandomHexColor();
