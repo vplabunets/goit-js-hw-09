@@ -11,6 +11,7 @@ const refs = {
   hoursQuantitySpanEl: document.querySelector('[data-hours]'),
   minutesQuantitySpanEl: document.querySelector('[data-minutes]'),
   secondsdaysQuantitySpanEl: document.querySelector('[data-seconds]'),
+  timerEl: document.querySelector('.timer'),
 };
 
 let currentDate = new Date();
@@ -69,6 +70,8 @@ function getTimeRemaining(endtime) {
 //
 function initializeClock(endtime) {
   let timeinterval = setInterval(function () {
+    refs.timerEl.style.color = getRandomHexColor();
+
     let t = getTimeRemaining(endtime);
     const { days, hours, minutes, seconds } = convertMs(t);
     // let remainingSecondsQuantity = addLeadingZero(seconds);
@@ -107,6 +110,12 @@ function convertMs(ms) {
 
   return { days, hours, minutes, seconds };
 }
-console.log(convertMs(2000)); // {days: 0, hours: 0, minutes: 0, seconds: 2}
-console.log(convertMs(140000)); // {days: 0, hours: 0, minutes: 2, seconds: 20}
-console.log(convertMs(24140000)); // {days: 0, hours: 6 minutes: 42, seconds: 20}
+// console.log(convertMs(2000)); // {days: 0, hours: 0, minutes: 0, seconds: 2}
+// console.log(convertMs(140000)); // {days: 0, hours: 0, minutes: 2, seconds: 20}
+// console.log(convertMs(24140000)); // {days: 0, hours: 6 minutes: 42, seconds: 20}
+
+refs.timerEl.style.color = getRandomHexColor();
+console.log(refs.timerEl);
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}

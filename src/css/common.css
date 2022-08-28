@@ -16,3 +16,45 @@ img {
   display: block;
   max-width: 100%;
 }
+input {
+  font-size: 16px;
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #42a5f5;
+  border: 2px;
+}
+button {
+  font-size: 16px;
+  height: 40px;
+  width: 140px;
+  border-radius: 5px;
+
+  color: black;
+  font-weight: bold;
+}
+button:focus {
+  color: rebeccapurple;
+}
+.timer {
+  display: flex;
+  justify-content: center;
+  color: #42a5f5;
+  font-size: 40;
+}
+
+.field {
+  margin-right: 50;
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+.value {
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+}
