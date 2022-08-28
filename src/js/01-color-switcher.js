@@ -2,7 +2,7 @@ const buttonStartEl = document.querySelector('button[data-start]');
 const buttonStopEl = document.querySelector('button[data-stop]');
 console.log(buttonStartEl);
 //
-bodyEl = document.querySelector('body');
+const bodyEl = document.querySelector('body');
 console.log(bodyEl);
 
 function getRandomHexColor() {
